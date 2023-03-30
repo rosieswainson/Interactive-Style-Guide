@@ -12,10 +12,20 @@ for (let i = 0; i < headingFont.length; i++) {
 // console.log(headingFont)
 
 
+// --------- INTRO PARAGRAPH
 
 
+const introduction = () => {
+    const text1 = ["A website style guide, also known as a design system or brand guidelines, is a set of rules and standards that define how a website should look and function. It typically includes information about typography, color palettes, layout, imagery, iconography, and other visual elements. The purpose of a website style guide is to ensure consistency and coherence across a website's design and to communicate the brand's visual identity to users."]
+    const text2 = ["For web designers, a website style guide can be an incredibly helpful tool. By establishing a clear set of design guidelines, designers can save time and effort by avoiding the need to make design decisions from scratch for each new page or feature. Additionally, a style guide can help ensure that all members of a design team are on the same page and working towards a shared vision. Finally, a well-designed style guide can help improve the user experience by creating a cohesive and memorable visual identity for the website."]
 
-// --------- GENERATOR BUTTONS
+    document.getElementById("introduction").innerHTML = `<p class="introduction2">${text1}<p>
+                                                        <p class="introduction2">${text2}<p>`;
+
+}
+
+
+// --------- GENERATOR BUTTONS ------------
 
 // --------- HEADER FONT BUTTON
 
@@ -134,10 +144,6 @@ generateSanSerifFont();
 
 sanSerifFont.addEventListener("click", generateSanSerifFont)
 
-// generateRandomBodyFont();
-// console.log(generateRandomBodyFont())
-
-
 // --------- COLOUR PALETTE
 
 
@@ -177,66 +183,3 @@ const copyColor = (elem, hexVal) => {
 }
 
 colourBtn.addEventListener("click", generatePalette);
-
-
-// Intro Paragraph
-
-
-
-const introduction = () => {
-    const text1 = ["A website style guide, also known as a design system or brand guidelines, is a set of rules and standards that define how a website should look and function. It typically includes information about typography, color palettes, layout, imagery, iconography, and other visual elements. The purpose of a website style guide is to ensure consistency and coherence across a website's design and to communicate the brand's visual identity to users."]
-    const text2 = ["For web designers, a website style guide can be an incredibly helpful tool. By establishing a clear set of design guidelines, designers can save time and effort by avoiding the need to make design decisions from scratch for each new page or feature. Additionally, a style guide can help ensure that all members of a design team are on the same page and working towards a shared vision. Finally, a well-designed style guide can help improve the user experience by creating a cohesive and memorable visual identity for the website."]
-
-    document.getElementById("introduction").innerHTML = `<p class="introduction2">${text1}<p>
-                                                        <p class="introduction2">${text2}<p>`;
-    
-    // "A website style guide, also known as a design system or brand guidelines, is a set of rules and standards that define how a website should look and function. It typically includes information about typography, color palettes, layout, imagery, iconography, and other visual elements. The purpose of a website style guide is to ensure consistency and coherence across a website's design and to communicate the brand's visual identity to users. For web designers, a website style guide can be an incredibly helpful tool. By establishing a clear set of design guidelines, designers can save time and effort by avoiding the need to make design decisions from scratch for each new page or feature. Additionally, a style guide can help ensure that all members of a design team are on the same page and working towards a shared vision. Finally, a well-designed style guide can help improve the user experience by creating a cohesive and memorable visual identity for the website.";
-
-    // document.getElementById("introduction").addEventListener("click", replacedText)
-
-    // const replacedText = [" A website style guide, also known as a design system or brand guidelines, is a set of rules and standards that define how a website should look and function. It typically includes information about typography, color palettes, layout, imagery, iconography, and other visual elements. The purpose of a website style guide is to ensure consistency and coherence across a website's design and to communicate the brand's visual identity to users. For web designers, a website style guide can be an incredibly helpful tool. By establishing a clear set of design guidelines, designers can save time and effort by avoiding the need to make design decisions from scratch for each new page or feature. Additionally, a style guide can help ensure that all members of a design team are on the same page and working towards a shared vision. Finally, a well-designed style guide can help improve the user experience by creating a cohesive and memorable visual identity for the website. "]
-}
-
-
-
-
-
-// Fonts Section
-document.getElementById("fonts-heading").innerHTML = "Choosing Font Pairings";
-
-const choosingFonts = document.getElementById("fonts-heading").style.fontFamily = "Fugaz One, cursive";
-
-
-const headingBackgroundColor = () => {
-    const primaryColour = document.getElementsByClassName("primary-colour");
-
-    let randomHex = Math.floor(Math.random() * 0xffffff).toString(16);
-    randomHex = `#${randomHex.padStart(6, "0")}`;
-
-    for (let i = 0; i < primaryColour.length; i++) {
-        primaryColour.style.backgroundColor = randomHex;
-    }
-}
-
-
-const headingColor = () => {
-    const secondaryColour = document.getElementById("secondary-colour"); 
-
-    let randomHex = Math.floor(Math.random() * 0xffffff).toString(16);
-    randomHex = `#${randomHex.padStart(6, "0")}`;
-
-    secondaryColour.style.backgroundColor = randomHex;
-
-    const secondaryColours = document.getElementsByClassName("seconday-colour");
-
-    for (let i = 0; secondaryColours.length; i++) {
-        secondaryColours.style.color = randomHex;
-    }
-}
-
-
-
-
-// document.getElementById(id)	Find an element by element id
-// document.getElementsByTagName(name)	Find elements by tag name
-// document.getElementsByClassName(name)	Find elements by class name
