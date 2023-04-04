@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alkatra:wght@700&family=Bebas+Neue&family=Bitter:ital@0;1&family=Bungee+Shade&family=Carter+One&family=Comfortaa:wght@700&family=Cormorant+Garamond:ital@0;1&family=Dela+Gothic+One&family=Fugaz+One&family=Gruppo&family=Inter&family=Karla:wght@300;400;500;600;700&family=Libre+Baskerville:ital@0;1&family=Lobster&family=Lora:ital@0;1&family=Luckiest+Guy&family=Merriweather:ital@0;1&family=Montserrat:wght@300;400;500;700&family=Noto+Sans:ital@0;1&family=Noto+Serif:ital@0;1&family=Nunito+Sans:ital@0;1&family=Open+Sans:ital@0;1&family=Oswald&family=PT+Serif:ital@0;1&family=Playfair+Display:ital@0;1&family=Poppins:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&family=Righteous&family=Roboto+Condensed:ital@0;1&family=Roboto+Slab&family=Roboto:ital@0;1&family=Rowdies:wght@700&family=Shrikhand&family=Source+Sans+Pro:ital@0;1&family=Source+Serif+Pro:ital@0;1&family=Syne:wght@400;600;700;800&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./style2.css">
     <script src="https://kit.fontawesome.com/9bf162238a.js" crossorigin="anonymous"></script>
     <title>Personal JS Reference</title>
 </head>
@@ -27,30 +28,34 @@
         </div>
     </section>
 
-    <!--   <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Dropdown
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-  </div>  -->
+    <section class="mobile-container">
+        <div class="topnav">
+            <a href="#home" class="active">Style Guide Generator</a>
+            <div id="myLinks">
+              <a href="#news">The Generator </a>
+              <a href="#contact">Contact</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+    </section>
 
     <!-- HERO SECTION AND ABOUT THE PROJECT -->
 
+    
     <section class="hero-banner">
         <div class="container" id="hero-text-container">
             <p id="introduction" onclick="introduction()">I decided to build this interactive web design style guide generator as a way to better my skills with the DOM, HTML, CSS and Javascript.<br>
             The user can interact with the buttons to change the layout, font styles, colours and imagery.<br>
             Once you have finished reading this, just click on this paragraph and the text will change.</p>
         </div>
-        <!-- This section will include the hero and image -->
-        <!-- The image can change when clicked -->
     </section>
 
+
     <!-- GENERATOR SECTION -->
+
+
     <section class="main-generator-section">
         <div class="flexbox-center">
             <h1 class="generator-heading fontclass" id="generator">The Generator</h1>
@@ -94,7 +99,6 @@
                         <p class="displayfont">Regular</p>
                         <p class="displayfont italic">Italic</p>
                         <p class="displayfont bold"><strong>Bold</strong></p>
-                        <p class="displayfont strikethrough">Strikethrough</p>
                     </div>
                 </div>
 
@@ -132,7 +136,6 @@
                         <p class="seriffont">Regular</p>
                         <p class="seriffont italic">Italic</p>
                         <p class="seriffont bold">Bold</p>
-                        <p class="seriffont strikethrough">Strikethrough</p>
                     </div>
                 </div>
 
@@ -177,7 +180,6 @@
                         <p class="sanfont">Regular</p>
                         <p class="sanfont italic">Italic</p>
                         <p class="sanfont bold">Bold</p>
-                        <p class="sanfont strikethrough">Strikethrough</p>
                     </div>
                 </div>
 
@@ -218,17 +220,8 @@
                 <button type="button" class="colour-btn">Change Colour Palette</button>
             </div>
         </div>
-                <!-- <div>
-                    <i class="fa-solid fa-bars fa-lg secondary-colour"></i>
-                    <i class="fa-solid fa-user fa-lg secondary-colour"></i>
-                    <i class="fa-solid fa-house fa-lg secondary-colour"></i>
-                    <i class="fa-solid fa-heart fa-lg secondary-colour"></i>
-                    <i class="fa-brands fa-instagram fa-lg secondary-colour"></i>
-                    <i class="fa-brands fa-facebook fa-lg secondary-colour"></i>
-                    <i class="fa-brands fa-twitter fa-lg secondary-colour"></i>
-                    <i class="fa-brands fa-pinterest fa-lg secondary-colour"></i>                    
-                </div> -->
     </section>
+    
 
     <script src="script.js" defer></script>
 </body>

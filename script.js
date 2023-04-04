@@ -11,14 +11,15 @@ for (let i = 0; i < headingFont.length; i++) {
   }
 // console.log(headingFont)
 
-
-let more = document.querySelector(".more");
-let hide = document.querySelectorAll(".hide");
-more.addEventListener("mouseenter", function() {
-  for (i = 0; i < hide.length; i++) {
-    hide[i].style.display = "block";
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
   }
-});
+
 
 
 // --------- INTRO PARAGRAPH
